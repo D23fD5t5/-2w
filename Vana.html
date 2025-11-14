@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сбалансированная политика паролей: Безопасность без вреда</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .member {
+            background-color: var(--light-color);
+            padding: 1rem;
+            border-radius: 5px;
+            flex: 1 1 200px;
+        }
+        
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .rule-card {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .pros-cons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .pros, .cons {
+            flex: 1 1 300px;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .pros {
+            background-color: #e8f6f3;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .cons {
+            background-color: #fdedec;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .password-managers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .manager {
+            flex: 1 1 250px;
+            padding: 1.5rem;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .highlight {
+            background-color: #fff9c4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #f1c40f;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .team-members, .rules-grid, .pros-cons, .password-managers {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Сбалансированная политика паролей: Безопасность без вреда</h1>
+            <p>Кибербезопасность</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="team">
+            <h2>Команда проекта</h2>
+            <div class="team-members">
+                <div class="member">
+                    <h3>Русских Дмитрий Константинович</h3>
+                    <p>Составил презентацию</p>
+                </div>
+                <div class="member">
+                    <h3>Ржевцев Евгений Григорьевич</h3>
+                    <p>Изучал причины проблемы</p>
+                </div>
+                <div class="member">
+                    <h3>Голтелов Артём Александрович</h3>
+                    <p>Искал лучшие способы создания паролей</p>
+                </div>
+                <div class="member">
+                    <h3>Антоненков Илья Андреевич</h3>
+                    <p>Составлял понятные правила</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem">
+            <h2>Суть проблемы и цель решения кейса</h2>
+            <p><strong>Текст кейса:</strong> В компании используются простые пароли. Нужно разработать сбалансированную политику — безопасную, но удобную для пользователей.</p>
+            <p><strong>Наша цель:</strong> Создать такие правила для паролей, которые будут надежно защищать данные, но при этом сотрудники не будут их записывать на бумажки или записывать в избранное в соц. сетях.</p>
+        </section>
+
+        <section id="target-audience">
+            <h2>Целевая аудитория</h2>
+            <h3>Для кого актуальна ситуация?</h3>
+            <ul>
+                <li>Все сотрудники компании, которые используют учетные записи для доступа к корпоративным системам.</li>
+                <li>Специалисты по информационной безопасности и IT-администраторы, отвечающие за настройку политик безопасности.</li>
+            </ul>
+            
+            <h3>Кому востребовано наше решение?</h3>
+            <ul>
+                <li><strong>Руководству компании</strong> — для снижения рисков кибератак.</li>
+                <li><strong>Сотрудникам</strong> — для понятных и выполнимых правил безопасности без лишнего стресса.</li>
+                <li><strong>HR и отделу обучения</strong> — для внедрения инструкций и обучения персонала.</li>
+            </ul>
+        </section>
+
+        <section id="rules">
+            <h2>Основные правила создания паролей</h2>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <h3>Минимальная длина</h3>
+                    <p>12 символов</p>
+                </div>
+                <div class="rule-card">
+                    <h3>Комбинация символов</h3>
+                    <p>Буквы разного регистра, цифры, специальные символы (не обязательно в каждом пароле)</p>
+                </div>
+                <div class="rule-card">
+                    <h3>Запрещено использовать</h3>
+                    <p>Личные данные (имена, даты рождения), общеизвестные слова и фразы, последовательности символов (Dima, 123456)</p>
+                </div>
+                <div class="rule-card">
+                    <h3>Периодичность смены</h3>
+                    <p>Сбалансированный подход без чрезмерно частой смены</p>
+                </div>
+                <div class="rule-card">
+                    <h3>Многофакторная аутентификация</h3>
+                    <p>Обязательна для критически важных систем</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution">
+            <h2>Решение: «Политика сбалансированных паролей»</h2>
+            <div class="highlight">
+                <h3>Длина важнее сложности</h3>
+                <p>Пароль должен быть не менее 12-15 символов.</p>
+                
+                <h3>Используйте запоминающуюся фразу</h3>
+                <p>Например, «snowy_winter2025(Снежная зима)» вместо «winter123».</p>
+                
+                <h3>Проверка на утечки</h3>
+                <p>Использование сервисов для проверки, не был ли пароль раскрыт в публичных утечках данных.</p>
+            </div>
+            
+            <h3>Почему это оптимально?</h3>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>Преимущества</h4>
+                    <ul>
+                        <li>Длинные фразы-пароли устойчивы к взлому</li>
+                        <li>Их легче запомнить</li>
+                        <li>Отказ от частой смены снимает нагрузку с пользователя</li>
+                        <li>Уменьшается желание записать пароль</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="password-managers">
+            <h2>Альтернатива «стикерам»: Менеджеры паролей</h2>
+            <p>Это специальные программы, которые надежно хранят все ваши пароли под одним главным — «мастер-паролем».</p>
+            <p>Решение позволяет использовать уникальные и сложные пароли для каждого сервиса, не запоминая их все.</p>
+            
+            <h3>Примеры:</h3>
+            <div class="password-managers">
+                <div class="manager">
+                    <h4>Bitwarden</h4>
+                    <p>Открытое программное обеспечение с бесплатным тарифом</p>
+                </div>
+                <div class="manager">
+                    <h4>KeePass</h4>
+                    <p>Локальный менеджер паролей с открытым исходным кодом</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2>Вывод</h2>
+            <p>Мы проанализировали проблему использования простых паролей и выяснили, что часто виной тому являются неудобные и устаревшие политики безопасности.</p>
+            <p>Наше решение смещает фокус с создания сложных для запоминания паролей на создание длинных и удобных парольных фраз.</p>
+            <p>Внедрение предложенных правил в сочетании с рекомендацией использовать менеджеры паролей позволит значительно повысить уровень безопасности в компании, сделав его при этом комфортным для сотрудников.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Команда кибербезопасности. Сбалансированная политика паролей.</p>
+        </div>
+    </footer>
+</body>
+</html>
